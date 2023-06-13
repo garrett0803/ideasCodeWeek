@@ -9,9 +9,15 @@ import com.intellij.ui.content.Content;
 import com.intellij.ui.content.ContentFactory;
 import org.jdesktop.swingx.action.ActionManager;
 import org.jetbrains.annotations.NotNull;
+import org.mozilla.javascript.ast.FunctionNode;
+
 import javax.swing.*;
 import javax.tools.Tool;
 import java.awt.*;
+import java.io.IOException;
+import java.net.URL;
+import java.net.URLConnection;
+
 
 public class JiraToolWindowFactory implements ToolWindowFactory, DumbAware {
 
@@ -37,8 +43,11 @@ public class JiraToolWindowFactory implements ToolWindowFactory, DumbAware {
 
             return jiraPanel;
         }
-        public void populateJira(ToolWindow toolWindow){
-
+        public void populateJira(ToolWindow toolWindow) throws IOException {
+            URL url = new URL("http://www.irapath.com");
+            String query=; //Query parameters
+            URLConnection c =url.openConnection();
+            c.setDoOutput(true);
         }
 
         public  JPanel getJiraPanel(){

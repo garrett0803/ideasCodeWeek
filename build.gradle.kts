@@ -10,10 +10,13 @@ version = "1.0-SNAPSHOT"
 repositories {
     mavenCentral()
     maven{
-        url = uri("https://mvnrepository.com/artifact/com.atlassian.jira/jira-api")
+        url = uri("https://repo.gradle.org/gradle/libs-releases/")
     }
-}
 
+}
+dependencies{
+    implementation("com.atlassian:jira-api:7.1.0")
+}
 // Configure Gradle IntelliJ Plugin
 // Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
 intellij {

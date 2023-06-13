@@ -1,7 +1,9 @@
 pluginManagement {
     repositories {
-        mavenCentral()
         gradlePluginPortal()
+        maven{
+            url = uri("https://mvnrepository.com/artifact/com.atlassian.jira/jira-api")
+        }
     }
 }
 
